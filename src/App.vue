@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="row">
+    <div class="column">
+      <weapon-calculator />
+    </div>
+    <div class="column"></div>
+  </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import WeaponCalculator from "./components/WeaponCalculator.vue";
 
 @Options({
   components: {
-    HelloWorld
+    WeaponCalculator
   }
 })
 export default class App extends Vue {}
@@ -23,5 +27,11 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
 }
 </style>
