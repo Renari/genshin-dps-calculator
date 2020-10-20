@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="left column">
-      Character Base Attack:
+      Base Attack:
     </div>
     <div class="right column">
       <input
@@ -9,21 +9,7 @@
         type="number"
         min="0"
         step="1"
-        v-model.number="characterAttack"
-      />
-    </div>
-  </div>
-  <div class="row">
-    <div class="left column">
-      Weapon Base Attack:
-    </div>
-    <div class="right column">
-      <input
-        @change="updateCalculations"
-        type="number"
-        min="0"
-        step="1"
-        v-model.number="weaponAttack"
+        v-model.number="baseAttack"
       />
     </div>
   </div>
@@ -139,8 +125,7 @@ import ExpandableValueBlock from "./ExpandableValueBlock.vue";
   }
 })
 export default class WeaponCalculator extends Vue {
-  characterAttack = 0;
-  weaponAttack = 0;
+  baseAttack = 0;
   elementalMasteryBonusPercent = 0;
   criticalRatePercent = 0;
   criticalDamagePercent = 0;
@@ -158,9 +143,7 @@ export default class WeaponCalculator extends Vue {
       0
     );
     const flatAttack = this.flatAttackModifiers.reduce((a, b) => a + b, 0);
-    this.attack =
-      (this.characterAttack + this.weaponAttack) * (1 + percentModifier) +
-      flatAttack;
+    this.attack = this.baseAttack * (1 + percentModifier) + flatAttack;
     const baseDamage =
       this.attack *
       (1 +
