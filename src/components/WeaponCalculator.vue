@@ -1,8 +1,6 @@
 <template>
   <div class="row">
-    <div class="left column">
-      Base Attack:
-    </div>
+    <div class="left column">Base Attack:</div>
     <div class="right column">
       <input
         @change="updateCalculations"
@@ -14,9 +12,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Elemental Mastery Bonus Percent:
-    </div>
+    <div class="left column">Elemental Mastery Bonus Percent:</div>
     <div class="right column">
       <input
         @change="updateCalculations"
@@ -40,9 +36,7 @@
     :values="this.flatAttackModifiers"
   />
   <div class="row">
-    <div class="left column">
-      Critical Rate Percent:
-    </div>
+    <div class="left column">Critical Rate Percent:</div>
     <div class="right column">
       <input
         @change="updateAttack"
@@ -54,9 +48,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Critical Damage Percent:
-    </div>
+    <div class="left column">Critical Damage Percent:</div>
     <div class="right column">
       <input
         @change="updateCalculations"
@@ -68,9 +60,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Physical Damage Percent:
-    </div>
+    <div class="left column">Physical Damage Percent:</div>
     <div class="right column">
       <input
         @change="updateCalculations"
@@ -82,33 +72,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Character Attack:
-    </div>
+    <div class="left column">Character Attack:</div>
     <div class="right column">
       {{ Math.round(attack) }}
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Physical Damage:
-    </div>
+    <div class="left column">Physical Damage:</div>
     <div class="right column">
       {{ Math.round(physicalDamage) }}
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Elemental Damage:
-    </div>
+    <div class="left column">Elemental Damage:</div>
     <div class="right column">
       {{ Math.round(elementalDamage) }}
     </div>
   </div>
   <div class="row">
-    <div class="left column">
-      Elemental Reaction Damage:
-    </div>
+    <div class="left column">Elemental Reaction Damage:</div>
     <div class="right column">
       {{ Math.round(reactionDamage) }}
     </div>
@@ -121,8 +103,8 @@ import ExpandableValueBlock from "./ExpandableValueBlock.vue";
 
 @Options({
   components: {
-    ExpandableValueBlock
-  }
+    ExpandableValueBlock,
+  },
 })
 export default class WeaponCalculator extends Vue {
   baseAttack = 0;

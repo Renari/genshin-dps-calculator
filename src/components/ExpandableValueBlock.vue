@@ -21,7 +21,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: ["prompt", "values", "step"],
-  emits: ["list-updated"]
+  emits: ["list-updated"],
 })
 export default class ExpandableValueBlock extends Vue {
   prompt!: string;

@@ -13,8 +13,8 @@ import WeaponCalculator from "./components/WeaponCalculator.vue";
 
 @Options({
   components: {
-    WeaponCalculator
-  }
+    WeaponCalculator,
+  },
 })
 export default class App extends Vue {}
 </script>
