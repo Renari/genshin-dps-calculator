@@ -72,6 +72,18 @@
     </div>
   </div>
   <div class="row">
+    <div class="left column">Elemental Damage Percent:</div>
+    <div class="right column">
+      <input
+        @change="updateCalculations"
+        type="number"
+        min="0"
+        step=".1"
+        v-model.number="elementalDamagePercent"
+      />
+    </div>
+  </div>
+  <div class="row">
     <div class="left column">Character Attack:</div>
     <div class="right column">
       {{ Math.round(attack) }}
